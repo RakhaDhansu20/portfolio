@@ -1,0 +1,580 @@
+/* RAKHA ENDHARNA | OFFICIAL PORTFOLIO STYLESHEET
+    Final Update: Fixed Cursor, Modal Video, & Tools Section
+*/
+
+/* --- GLOBAL SETTINGS --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    cursor: none !important; /* Menyembunyikan kursor asli browser secara paksa */
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background: #050505; 
+    color: #fff; 
+    line-height: 1.6; 
+    overflow-x: hidden; 
+    scroll-behavior: smooth; 
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 40px; 
+}
+
+.text-center { text-align: center; }
+
+.section-label { 
+    display: block; 
+    font-size: 11px; 
+    text-transform: uppercase; 
+    letter-spacing: 5px; 
+    color: #555; 
+    margin-bottom: 25px; 
+}
+
+/* --- CUSTOM CURSOR (HIGHEST PRIORITY) --- */
+.cursor { 
+    width: 8px; 
+    height: 8px; 
+    background: #e50914; 
+    border-radius: 50%; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    pointer-events: none; 
+    z-index: 999999; /* Di atas segalanya termasuk modal video */
+}
+
+.cursor-follower { 
+    width: 35px; 
+    height: 35px; 
+    border: 1px solid rgba(229, 9, 20, 0.4); 
+    border-radius: 50%; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    pointer-events: none; 
+    z-index: 999998; 
+    transition: transform 0.15s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* --- NAVBAR --- */
+.navbar { 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    padding: 30px 0; 
+    transition: 0.5s ease; 
+}
+
+.nav-container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo { 
+    font-size: 22px; 
+    font-weight: 900; 
+    letter-spacing: -1px;
+}
+
+.logo span { color: #e50914; }
+
+.nav-links a { 
+    color: #fff; 
+    text-decoration: none; 
+    margin-left: 35px; 
+    font-size: 11px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    opacity: 0.6; 
+    transition: 0.3s; 
+}
+
+.nav-links a:hover { 
+    opacity: 1; 
+    color: #e50914; 
+}
+
+/* --- HERO SECTION --- */
+.hero { 
+    height: 100vh; 
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    overflow: hidden; 
+}
+
+.hero-video { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    min-width: 100%; 
+    min-height: 100%; 
+    transform: translate(-50%, -50%); 
+    object-fit: cover; 
+    opacity: 0.35; 
+}
+
+.overlay { 
+    position: absolute; 
+    inset: 0; 
+    background: radial-gradient(circle, transparent 20%, #050505 100%); 
+}
+
+.hero-content { position: relative; z-index: 2; }
+
+.hero h1 { 
+    font-size: clamp(50px, 10vw, 110px); 
+    font-weight: 800; 
+    text-transform: uppercase; 
+    letter-spacing: -4px; 
+    line-height: 0.8; 
+    margin: 20px 0;
+}
+
+.hero-line { 
+    width: 60px; 
+    height: 4px; 
+    background: #e50914; 
+    margin: 20px auto; 
+}
+
+.tagline { 
+    font-family: 'Playfair Display', serif; 
+    font-style: italic; 
+    color: #888; 
+    font-size: 1.4rem; 
+}
+
+.btn { 
+    display: inline-block; 
+    margin-top: 40px; 
+    padding: 15px 35px; 
+    border: 1px solid #333; 
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 11px; 
+    letter-spacing: 2px; 
+    text-transform: uppercase; 
+    transition: 0.4s; 
+}
+
+.btn:hover { background: #fff; color: #000; }
+
+/* --- PERSONAL MOTTO --- */
+.personal-motto { 
+    padding: 120px 0; 
+    background: #050505; 
+    text-align: center; 
+    border-bottom: 1px solid #111; 
+}
+
+.motto-label { 
+    font-size: 10px; 
+    text-transform: uppercase; 
+    letter-spacing: 6px; 
+    color: #e50914; 
+    margin-bottom: 20px; 
+    font-weight: 800; 
+}
+
+.motto-text { 
+    font-size: clamp(24px, 4vw, 42px); 
+    font-weight: 800; 
+    font-style: italic; 
+    color: #fff; 
+    line-height: 1.2; 
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+
+/* --- PROFILE & EDUCATION --- */
+.about { padding: 150px 0 100px 0; }
+
+.profile-grid { 
+    display: grid; 
+    grid-template-columns: 1.2fr 0.8fr; 
+    gap: 80px; 
+    align-items: center; 
+}
+
+.profile-text h2 { 
+    font-size: clamp(30px, 4vw, 45px); 
+    font-weight: 800; 
+    margin-bottom: 30px; 
+    line-height: 1.1; 
+}
+
+.image-frame { 
+    width: 260px; 
+    aspect-ratio: 4/5; 
+    overflow: hidden; 
+    border-radius: 4px; 
+    border: 1px solid rgba(255,255,255,0.1); 
+}
+
+.image-frame img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    filter: grayscale(100%); 
+    transition: 0.6s; 
+}
+
+.education-box { 
+    margin-top: 40px; 
+    padding: 25px; 
+    border-radius: 10px; 
+    background: #0a0a0a; 
+    border-left: 4px solid #e50914; 
+}
+
+.edu-label { 
+    font-size: 10px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    color: #555; 
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+/* --- MASTERPIECE (TUGEL) --- */
+.masterpiece-section { padding: 120px 0; background: #080808; }
+
+.masterpiece-grid { 
+    display: grid; 
+    grid-template-columns: 1.2fr 1fr; 
+    gap: 60px; 
+    align-items: center; 
+}
+
+.m-title { 
+    font-size: clamp(50px, 7vw, 90px); 
+    font-weight: 900; 
+    color: #e50914; 
+    font-style: italic; 
+}
+
+.m-quote { 
+    font-family: 'Playfair Display', serif; 
+    font-style: italic; 
+    font-size: 1.6rem; 
+    color: #fff; 
+    margin-bottom: 30px; 
+    border-left: 3px solid #e50914; 
+    padding-left: 20px; 
+}
+
+.m-meta { 
+    display: flex; 
+    gap: 20px; 
+    margin-bottom: 35px; 
+    align-items: center; 
+}
+
+.m-year { 
+    font-size: 15px; 
+    color: #fff; 
+    font-weight: 800; 
+    border: 1px solid #e50914; 
+    padding: 3px 12px; 
+    border-radius: 4px; 
+    background: rgba(229, 9, 20, 0.15); 
+}
+
+.m-frame { 
+    max-width: 450px; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5); 
+}
+
+.m-frame img { width: 100%; display: block; }
+
+/* --- PORTFOLIO SLIDER --- */
+.portfolio { padding: 120px 0; background: #050505; }
+
+.slider-title { 
+    font-size: clamp(30px, 5vw, 50px); 
+    margin-bottom: 60px; 
+    font-weight: 800; 
+    text-transform: uppercase; 
+}
+
+.mySwiper { width: 100%; padding: 50px 0 !important; }
+
+.swiper-slide { 
+    width: auto !important; 
+    transition: 0.5s; 
+    opacity: 0.3; 
+    transform: scale(0.85); 
+}
+
+.swiper-slide-active { 
+    opacity: 1; 
+    transform: scale(1.05); 
+    z-index: 10; 
+}
+
+.netflix-card { 
+    position: relative; 
+    width: 650px; 
+    height: 350px; 
+    background: #111; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    border: 1px solid rgba(255,255,255,0.08); 
+}
+
+.card-bg { 
+    position: absolute; 
+    inset: 0; 
+    background-size: cover; 
+    background-position: center; 
+    opacity: 0.15; 
+    filter: blur(2px); 
+}
+
+.card-content { 
+    position: relative; 
+    z-index: 2; 
+    display: flex; 
+    align-items: center; 
+    padding: 40px; 
+    gap: 40px; 
+    height: 100%; 
+}
+
+.poster { 
+    width: 170px; 
+    height: 240px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.8); 
+}
+
+.film-meta { 
+    margin-bottom: 15px; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+.f-year { 
+    font-size: 13px; 
+    font-weight: 800; 
+    color: #fff; 
+    border: 1px solid #444; 
+    padding: 2px 10px; 
+    border-radius: 4px; 
+    background: #222; 
+}
+
+.f-role { 
+    font-size: 13px; 
+    font-weight: 800; 
+    color: #e50914; 
+    text-transform: uppercase; 
+}
+
+/* --- WATCH TRAILER BUTTON (RED) --- */
+.watch-btn.red-btn { 
+    display: inline-block; 
+    background: #e50914; 
+    color: #fff; 
+    padding: 12px 25px; 
+    border-radius: 5px; 
+    font-weight: 800; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-size: 12px; 
+    letter-spacing: 1px; 
+    box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4); 
+    transition: 0.3s; 
+}
+
+.watch-btn.red-btn:hover { 
+    background: #fff; 
+    color: #000; 
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 20px rgba(255,255,255,0.2);
+}
+
+/* --- BTS GRID --- */
+.bts-section { padding: 120px 0; background: #050505; }
+
+.bts-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-auto-rows: 200px; 
+    gap: 20px; 
+}
+
+.bts-item { overflow: hidden; border-radius: 10px; background: #111; }
+
+.bts-item img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    filter: grayscale(100%); 
+    transition: 0.8s; 
+}
+
+.bts-item:hover img { filter: grayscale(0%); transform: scale(1.05); }
+
+.bts-item.featured { grid-column: span 2; grid-row: span 2; }
+
+.bts-item.landscape { grid-column: span 2; }
+
+/* --- TOOLS SECTION --- */
+.tools-section { 
+    padding: 120px 0; 
+    background: #080808; 
+    border-top: 1px solid #111; 
+    text-align: center; 
+}
+
+.tools-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; 
+    margin-top: 50px; 
+}
+
+.tool-category span { 
+    display: block; 
+    font-size: 10px; 
+    color: #e50914; 
+    letter-spacing: 3px; 
+    font-weight: 800; 
+    margin-bottom: 10px; 
+    text-transform: uppercase; 
+}
+
+.tool-category p { 
+    font-size: 1.1rem; 
+    font-weight: 700; 
+    color: #fff; 
+}
+
+/* --- PROFESSIONAL EXPERIENCE --- */
+.industry { padding: 150px 0; background: #050505; }
+
+.exp-item { 
+    padding: 45px 0; 
+    border-bottom: 1px solid #161616; 
+}
+
+.exp-content-wrapper { 
+    display: flex; 
+    align-items: center; 
+    gap: 40px; 
+}
+
+.exp-logo { width: 100px; flex-shrink: 0; }
+
+.exp-logo img { max-width: 100%; object-fit: contain; }
+
+.exp-header { 
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+    margin-bottom: 8px; 
+    align-items: center; 
+}
+
+.exp-header h4 { font-size: 18px; font-weight: 800; text-transform: uppercase; }
+
+.exp-header span { 
+    color: #e50914; 
+    font-size: 11px; 
+    font-weight: 800; 
+    border: 1px solid #e50914; 
+    padding: 2px 10px; 
+    border-radius: 20px; 
+}
+
+/* --- VIDEO MODAL SYSTEM --- */
+.modal-overlay {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.98);
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    z-index: 100000; /* Di bawah kursor kustom */
+    opacity: 0; 
+    visibility: hidden; 
+    transition: 0.4s;
+}
+
+.modal-overlay.active { 
+    opacity: 1; 
+    visibility: visible; 
+}
+
+.modal-content {
+    position: relative; 
+    width: 90%; 
+    max-width: 1000px;
+    aspect-ratio: 16/9; 
+    background: #000;
+}
+
+.modal-content video { width: 100%; height: 100%; }
+
+.close-modal {
+    position: absolute; 
+    top: -50px; 
+    right: 0;
+    font-size: 40px; 
+    color: #fff; 
+    cursor: pointer !important;
+}
+
+.close-modal:hover { color: #e50914; }
+
+/* --- CONTACT SECTION --- */
+.contact { padding: 150px 0; text-align: center; }
+
+.contact h2 { 
+    font-size: clamp(40px, 8vw, 80px); 
+    font-weight: 800; 
+    margin-bottom: 40px; 
+    letter-spacing: -3px; 
+}
+
+.contact-links a { 
+    margin: 0 15px; 
+    text-decoration: none; 
+    color: #fff; 
+    opacity: 0.5; 
+    font-size: 11px; 
+    letter-spacing: 2px; 
+    text-transform: uppercase;
+}
+
+.contact-links a:hover { opacity: 1; color: #e50914; }
+
+/* --- RESPONSIVE FIXES --- */
+@media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .profile-grid, .masterpiece-grid, .tools-grid { grid-template-columns: 1fr; text-align: center; }
+    .netflix-card { width: 340px; height: auto; }
+    .card-content { flex-direction: column; padding: 20px; }
+    .poster { width: 140px; height: 200px; }
+    .cursor, .cursor-follower { display: none; } /* Matikan kursor kustom di mobile */
+    * { cursor: auto !important; }
+}
