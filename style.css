@@ -312,6 +312,175 @@ body { background: #050505; color: #fff; font-family: 'Inter', sans-serif; overf
     border-radius: 20px; 
 }
 
+/* --- CLIENTS SECTION DARK THEME --- */
+.clients-section-dark {
+    padding: 120px 0;
+    background: #050505;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Tekstur */
+.dark-text-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    opacity: 0.02;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.dark-text-bg span {
+    display: block;
+    font-size: 130px;
+    font-weight: 900;
+    letter-spacing: -5px;
+    text-transform: uppercase;
+    color: #fff;
+    white-space: nowrap;
+    line-height: 0.8;
+}
+
+/* Content */
+.dark-collaboration-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.dark-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 10px 0 15px;
+    letter-spacing: -1px;
+    color: #fff;
+}
+
+.dark-subtitle {
+    color: #888;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+/* --- CLIENTS SECTION DARK THEME --- */
+.clients-section-dark {
+    padding: 120px 0;
+    background: #050505;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Text */
+.dark-text-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    opacity: 0.02;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.dark-text-bg span {
+    display: block;
+    font-size: 130px;
+    font-weight: 900;
+    letter-spacing: -5px;
+    text-transform: uppercase;
+    color: #fff;
+    white-space: nowrap;
+    line-height: 0.8;
+}
+
+/* Content */
+.dark-collaboration-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.dark-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 10px 0 15px;
+}
+
+.dark-subtitle {
+    color: #888;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+/* === FLEX GRID (CENTER PERFECT) === */
+.dark-logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* BOX LOGO (DIBESARKAN) */
+.dark-logo-item {
+    width: 200px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: 0.4s ease;
+}
+
+/* LOGO (PROPORSIONAL) */
+.dark-logo-item img {
+    max-width: 150px;
+    max-height: 70px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(1) brightness(0.75);
+    opacity: 0.7;
+    transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* HOVER EFFECT */
+.dark-logo-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(229, 9, 20, 0.4);
+}
+
+.dark-logo-item:hover img {
+    filter: grayscale(0) brightness(1.2);
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .dark-logo-grid {
+        gap: 35px;
+        max-width: 900px;
+    }
+
+    .dark-logo-item {
+        width: 120px;
+        height: 75px;
+    }
+
+    .dark-logo-item img {
+        max-width: 90px;
+        max-height: 40px;
+    }
+}
+
 /* --- FOOTER --- */
 .footer { padding: 100px 0 50px; border-top: 1px solid #1a1a1a; margin-top: 50px; }
 .footer-grid { display: flex; justify-content: space-between; align-items: flex-start; }
