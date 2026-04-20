@@ -91,13 +91,50 @@ body { background: #050505; color: #fff; font-family: 'Inter', sans-serif; overf
 .m-content { position: relative; z-index: 2; padding-left: 5%; max-width: 900px; }
 .m-tag { color: #e50914; font-weight: 900; font-size: 12px; letter-spacing: 3px; }
 .m-quote { font-style: italic; opacity: 0.7; margin: 10px 0; }
-.m-title { font-size: clamp(80px, 18vw, 170px); font-weight: 900; color: #e50914; line-height: 0.75; margin: 15px 0 25px -10px; letter-spacing: -8px; }
-.m-info { display: flex; gap: 20px; font-weight: 700; margin-bottom: 25px; align-items: center; }
+.m-info {
+    display: flex;
+    gap: 5px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    align-items: center;
+    color: #fff;
+}
 .rating { color: #46d369; }
-.status { background: rgba(70, 211, 105, 0.2); color: #46d369; padding: 2px 10px; font-size: 10px; border-radius: 3px; text-transform: uppercase; }
-.m-desc { color: #ccc; font-size: 1.1rem; max-width: 550px; margin-bottom: 35px; }
+.status { background: rgba(70, 211, 105, 0.2); color: #46d369; padding: 2px 5px; font-size: 10px; border-radius: 3px; text-transform: uppercase; }
+.m-desc {
+    color: #ccc;
+    font-size: 1.1rem;
+    max-width: 550px; /* Supaya teks tidak terlalu melebar ke kanan */
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
 .btn-play { background: #e50914; border: none; color: #fff; padding: 16px 35px; font-weight: 900; border-radius: 4px; transition: 0.3s; }
 .btn-play:hover { transform: scale(1.05); background: #f40a16; }
+.m-logo-container {
+    margin: 10px 0 10px -10px; /* Jarak pas agar sejajar dengan info di bawahnya */
+    max-width: 400px; /* Batas lebar agar seimbang dengan sinopsis */
+}
+
+.m-logo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    /* Memberikan efek glow tipis agar logo terlihat "pop" di atas video/gambar gelap */
+    filter: drop-shadow(0 0 10px rgba(229, 9, 20, 0.3)); 
+}
+
+/* Penyesuaian Mobile */
+@media (max-width: 768px) {
+    .m-logo-container {
+        max-width: 300px;
+        margin: 10px auto 20px;
+    }
+    .m-desc {
+        font-size: 0.95rem;
+        margin: 0 auto 30px;
+    }
+}
 
 /* --- PORTFOLIO SLIDER --- */
 .portfolio { padding: 120px 0; background: #050505; }
