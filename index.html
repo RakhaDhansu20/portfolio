@@ -41,6 +41,64 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Selected portfolio works by Rakha Endharna Suseno",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Tugel",
+            "dateCreated": "2025",
+            "genre": "Short Film",
+            "creator": "Rakha Endharna Suseno",
+            "creditText": "Director"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Mondar Mandir",
+            "dateCreated": "2024",
+            "genre": "Short Film",
+            "creator": "Rakha Endharna Suseno",
+            "creditText": "Director of Photography"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Berbagi Cerita",
+            "dateCreated": "2024",
+            "genre": "Short Film",
+            "creator": "Rakha Endharna Suseno",
+            "creditText": "Director"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Sanitas",
+            "dateCreated": "2022",
+            "genre": "Film",
+            "creator": "Rakha Endharna Suseno",
+            "creditText": "Film Editor"
+          }
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -54,23 +112,29 @@
 <body>
     <div class="cursor" aria-hidden="true"></div>
     <div class="cursor-follower" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
     <nav class="navbar" aria-label="Primary navigation">
         <div class="nav-wrapper">
             <a href="#" class="logo hover-target" aria-label="Rakha portfolio home">RAKHA<span>.</span></a>
-            <div class="nav-links">
+            <button type="button" class="nav-toggle hover-target" aria-controls="primaryNav" aria-expanded="false" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="primaryNav">
                 <a href="#about" class="hover-target">Profile</a>
                 <a href="#work" class="hover-target">Works</a>
                 <a href="#bts" class="hover-target">BTS</a>
                 <a href="#experience" class="hover-target">Experience</a>
-                <a href="#services" class="hover-target">Services</a>
+                <a href="#services" class="hover-target">Capabilities</a>
             </div>
         </div>
     </nav>
 
     <main>
         <section class="hero" aria-label="Hero">
-            <video autoplay muted loop playsinline class="hero-video">
+            <video autoplay muted loop playsinline preload="metadata" poster="assets/images/preview.jpg" class="hero-video">
                 <source src="assets/video/hero-video.mp4" type="video/mp4">
             </video>
             <div class="overlay-vignette" aria-hidden="true"></div>
@@ -307,13 +371,13 @@
                 <span class="section-num">03. Motion & Edits</span>
                 <h2 class="title-lg">Commercial Cuts & Social Content</h2>
                 <div class="reels-wrapper" aria-label="Short-form video reel carousel">
-                    <video src="assets/video/reels/reel1.mp4" autoplay muted loop playsinline aria-label="Short-form reel preview 1"></video>
-                    <video src="assets/video/reels/reel1.mp4" autoplay muted loop playsinline aria-label="Short-form reel preview 2"></video>
-                    <video src="assets/video/reels/reel1.mp4" autoplay muted loop playsinline aria-label="Short-form reel preview 3"></video>
-                    <video src="assets/video/reels/reel1.mp4" autoplay muted loop playsinline aria-label="Short-form reel preview 4"></video>
-                    <video src="assets/video/reels/reel1.mp4" autoplay muted loop playsinline aria-label="Short-form reel preview 5"></video>
-                    <video src="assets/video/reels/reel1.mp4" autoplay muted loop playsinline aria-label="Short-form reel preview 6"></video>
-                    <video src="assets/video/reels/reel1.mp4" autoplay muted loop playsinline aria-label="Short-form reel preview 7"></video>
+                    <video data-src="assets/video/reels/reel1.mp4" preload="none" muted loop playsinline poster="assets/images/thumbnail/edit-thumb1.jpg" aria-label="Short-form reel preview 1"></video>
+                    <video data-src="assets/video/reels/reel1.mp4" preload="none" muted loop playsinline poster="assets/images/edit-thumb2.jpg" aria-label="Short-form reel preview 2"></video>
+                    <video data-src="assets/video/reels/reel1.mp4" preload="none" muted loop playsinline poster="assets/images/edit-thumb3.jpg" aria-label="Short-form reel preview 3"></video>
+                    <video data-src="assets/video/reels/reel1.mp4" preload="none" muted loop playsinline poster="assets/images/edit-thumb4.jpg" aria-label="Short-form reel preview 4"></video>
+                    <video data-src="assets/video/reels/reel1.mp4" preload="none" muted loop playsinline poster="assets/images/thumbnail/edit-thumb1.jpg" aria-label="Short-form reel preview 5"></video>
+                    <video data-src="assets/video/reels/reel1.mp4" preload="none" muted loop playsinline poster="assets/images/edit-thumb2.jpg" aria-label="Short-form reel preview 6"></video>
+                    <video data-src="assets/video/reels/reel1.mp4" preload="none" muted loop playsinline poster="assets/images/edit-thumb3.jpg" aria-label="Short-form reel preview 7"></video>
                 </div>
 
                 <div class="editing-grid">
@@ -361,16 +425,16 @@
                 <span class="section-num">04. Behind The Scenes</span>
                 <p class="bts-caption">Behind every cinematic frame, there's chaos, craft, and intention.</p>
                 <div class="bts-grid-small">
-                    <div class="bts-thumb hover-target"><img src="assets/images/bts/bts18.jpg" alt="Behind the scenes production moment 1" loading="lazy"></div>
-                    <div class="bts-thumb hover-target"><img src="assets/images/bts/bts2.jpg" alt="Behind the scenes production moment 2" loading="lazy"></div>
-                    <div class="bts-thumb hover-target"><img src="assets/images/bts/bts3.jpg" alt="Behind the scenes production moment 3" loading="lazy"></div>
-                    <div class="bts-thumb hover-target"><img src="assets/images/bts/bts4.jpg" alt="Behind the scenes production moment 4" loading="lazy"></div>
-                    <div class="bts-thumb hover-target"><img src="assets/images/bts/bts5.jpg" alt="Behind the scenes production moment 5" loading="lazy"></div>
-                    <div class="bts-thumb hover-target"><img src="assets/images/bts/bts6.jpg" alt="Behind the scenes production moment 6" loading="lazy"></div>
-                    <div class="bts-thumb hover-target"><img src="assets/images/bts/bts11.jpg" alt="Behind the scenes production moment 7" loading="lazy"></div>
-                    <div class="bts-thumb hover-target"><img src="assets/images/bts/bts16.jpg" alt="Behind the scenes production moment 8" loading="lazy"></div>
-                    <div class="bts-thumb hover-target"><img src="assets/images/bts/bts12.jpg" alt="Behind the scenes production moment 9" loading="lazy"></div>
-                    <div class="bts-thumb hover-target"><img src="assets/images/bts/bts19.jpg" alt="Behind the scenes production moment 10" loading="lazy"></div>
+                    <button type="button" class="bts-thumb hover-target" data-full="assets/images/bts/bts18.jpg" data-caption="Production still - behind the scenes moment 1"><img src="assets/images/bts/bts18.jpg" alt="Behind the scenes production moment 1" loading="lazy"></button>
+                    <button type="button" class="bts-thumb hover-target" data-full="assets/images/bts/bts2.jpg" data-caption="Production still - behind the scenes moment 2"><img src="assets/images/bts/bts2.jpg" alt="Behind the scenes production moment 2" loading="lazy"></button>
+                    <button type="button" class="bts-thumb hover-target" data-full="assets/images/bts/bts3.jpg" data-caption="Production still - behind the scenes moment 3"><img src="assets/images/bts/bts3.jpg" alt="Behind the scenes production moment 3" loading="lazy"></button>
+                    <button type="button" class="bts-thumb hover-target" data-full="assets/images/bts/bts4.jpg" data-caption="Production still - behind the scenes moment 4"><img src="assets/images/bts/bts4.jpg" alt="Behind the scenes production moment 4" loading="lazy"></button>
+                    <button type="button" class="bts-thumb hover-target" data-full="assets/images/bts/bts5.jpg" data-caption="Production still - behind the scenes moment 5"><img src="assets/images/bts/bts5.jpg" alt="Behind the scenes production moment 5" loading="lazy"></button>
+                    <button type="button" class="bts-thumb hover-target" data-full="assets/images/bts/bts6.jpg" data-caption="Production still - behind the scenes moment 6"><img src="assets/images/bts/bts6.jpg" alt="Behind the scenes production moment 6" loading="lazy"></button>
+                    <button type="button" class="bts-thumb hover-target" data-full="assets/images/bts/bts11.jpg" data-caption="Production still - behind the scenes moment 7"><img src="assets/images/bts/bts11.jpg" alt="Behind the scenes production moment 7" loading="lazy"></button>
+                    <button type="button" class="bts-thumb hover-target" data-full="assets/images/bts/bts16.jpg" data-caption="Production still - behind the scenes moment 8"><img src="assets/images/bts/bts16.jpg" alt="Behind the scenes production moment 8" loading="lazy"></button>
+                    <button type="button" class="bts-thumb hover-target" data-full="assets/images/bts/bts12.jpg" data-caption="Production still - behind the scenes moment 9"><img src="assets/images/bts/bts12.jpg" alt="Behind the scenes production moment 9" loading="lazy"></button>
+                    <button type="button" class="bts-thumb hover-target" data-full="assets/images/bts/bts19.jpg" data-caption="Production still - behind the scenes moment 10"><img src="assets/images/bts/bts19.jpg" alt="Behind the scenes production moment 10" loading="lazy"></button>
                 </div>
             </div>
         </section>
@@ -474,13 +538,13 @@
 
         <section id="services" class="services-section">
             <div class="container">
-                <span class="section-num">07. Services</span>
-                <h2 class="title-lg">Production support from concept to final delivery.</h2>
+                <span class="section-num">07. Capabilities</span>
+                <h2 class="title-lg">Core creative roles across portfolio work.</h2>
                 <div class="services-grid">
                     <article class="service-card">
                         <span>01</span>
-                        <h3>Videography</h3>
-                        <p>Camera operation, BTS coverage, social content, event visuals, and production documentation.</p>
+                        <h3>Videography & BTS</h3>
+                        <p>Camera operation, behind-the-scenes coverage, event visuals, and production documentation.</p>
                     </article>
                     <article class="service-card">
                         <span>02</span>
@@ -550,6 +614,16 @@
         </div>
     </footer>
 
+    <div id="btsLightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Behind the scenes photo viewer">
+        <button type="button" class="lightbox-close hover-target" aria-label="Close photo viewer">&times;</button>
+        <button type="button" class="lightbox-nav lightbox-prev hover-target" aria-label="Previous behind the scenes photo">&#8249;</button>
+        <figure class="lightbox-content">
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+        <button type="button" class="lightbox-nav lightbox-next hover-target" aria-label="Next behind the scenes photo">&#8250;</button>
+    </div>
+
     <div id="videoModal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Video player">
         <div class="modal-content">
             <button type="button" class="close-modal hover-target" aria-label="Close video">&times;</button>
@@ -564,8 +638,16 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const isDesktopMedia = window.matchMedia('(min-width: 769px)');
+
             if (window.AOS) {
-                AOS.init({ duration: 900, once: true, offset: 80 });
+                AOS.init({
+                    duration: prefersReducedMotion ? 0 : 850,
+                    once: true,
+                    offset: 80,
+                    disable: () => prefersReducedMotion
+                });
             }
 
             if (window.Swiper) {
@@ -585,6 +667,59 @@
                         1024: { spaceBetween: 50 }
                     }
                 });
+            }
+
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+            const closeMobileNav = () => {
+                if (!navToggle || !navLinks) return;
+                navToggle.setAttribute('aria-expanded', 'false');
+                navLinks.classList.remove('is-open');
+                document.body.classList.remove('nav-open');
+            };
+
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', () => {
+                    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+                    navToggle.setAttribute('aria-expanded', String(!isOpen));
+                    navLinks.classList.toggle('is-open', !isOpen);
+                    document.body.classList.toggle('nav-open', !isOpen);
+                });
+
+                navAnchors.forEach((anchor) => {
+                    anchor.addEventListener('click', closeMobileNav);
+                });
+            }
+
+            const progressBar = document.querySelector('.scroll-progress span');
+            const updateScrollProgress = () => {
+                if (!progressBar) return;
+                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+                progressBar.style.width = `${Math.min(progress, 100)}%`;
+            };
+
+            updateScrollProgress();
+            window.addEventListener('scroll', updateScrollProgress, { passive: true });
+            window.addEventListener('resize', updateScrollProgress);
+
+            const sections = [...navAnchors]
+                .map((anchor) => document.querySelector(anchor.getAttribute('href')))
+                .filter(Boolean);
+
+            if ('IntersectionObserver' in window && sections.length) {
+                const sectionObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        navAnchors.forEach((anchor) => {
+                            anchor.classList.toggle('is-active', anchor.getAttribute('href') === `#${entry.target.id}`);
+                        });
+                    });
+                }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+
+                sections.forEach((section) => sectionObserver.observe(section));
             }
 
             const cursor = document.querySelector('.cursor');
@@ -636,6 +771,41 @@
                 });
             }
 
+            const reelVideos = document.querySelectorAll('.reels-wrapper video[data-src]');
+            const hydrateReel = (video) => {
+                if (!video || video.dataset.loaded === 'true') return;
+                video.src = video.dataset.src;
+                video.dataset.loaded = 'true';
+                video.load();
+            };
+
+            if ('IntersectionObserver' in window && reelVideos.length) {
+                const reelObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        const video = entry.target;
+                        if (entry.isIntersecting && isDesktopMedia.matches && !prefersReducedMotion) {
+                            hydrateReel(video);
+                            video.play().catch(() => {});
+                        } else {
+                            video.pause();
+                        }
+                    });
+                }, { rootMargin: '220px 0px', threshold: 0.35 });
+
+                reelVideos.forEach((video) => reelObserver.observe(video));
+            }
+
+            reelVideos.forEach((video) => {
+                video.addEventListener('click', () => {
+                    hydrateReel(video);
+                    if (video.paused) {
+                        video.play().catch(() => {});
+                    } else {
+                        video.pause();
+                    }
+                });
+            });
+
             const modal = document.getElementById('videoModal');
             const trailerVideo = document.getElementById('trailerVideo');
             const closeBtn = document.querySelector('.close-modal');
@@ -647,6 +817,7 @@
                 trailerVideo.load();
                 modal.classList.add('active');
                 modal.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('modal-open');
                 trailerVideo.play().catch(() => {});
             };
 
@@ -658,6 +829,7 @@
                 trailerVideo.currentTime = 0;
                 videoSource.removeAttribute('src');
                 trailerVideo.load();
+                document.body.classList.remove('modal-open');
             };
 
             document.querySelectorAll('.open-trailer').forEach((button) => {
@@ -674,9 +846,70 @@
                 });
             }
 
+            const lightbox = document.getElementById('btsLightbox');
+            const lightboxImage = lightbox ? lightbox.querySelector('img') : null;
+            const lightboxCaption = lightbox ? lightbox.querySelector('figcaption') : null;
+            const lightboxClose = document.querySelector('.lightbox-close');
+            const lightboxPrev = document.querySelector('.lightbox-prev');
+            const lightboxNext = document.querySelector('.lightbox-next');
+            const btsItems = [...document.querySelectorAll('.bts-thumb')];
+            let activeBtsIndex = 0;
+            let lastLightboxTrigger = null;
+
+            const setLightboxImage = (index) => {
+                if (!lightboxImage || !lightboxCaption || !btsItems.length) return;
+                activeBtsIndex = (index + btsItems.length) % btsItems.length;
+                const current = btsItems[activeBtsIndex];
+                const img = current.querySelector('img');
+                lightboxImage.src = current.dataset.full || img.src;
+                lightboxImage.alt = img.alt;
+                lightboxCaption.textContent = current.dataset.caption || img.alt;
+            };
+
+            const openLightbox = (index, trigger) => {
+                if (!lightbox) return;
+                lastLightboxTrigger = trigger;
+                setLightboxImage(index);
+                lightbox.classList.add('active');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('modal-open');
+                if (lightboxClose) lightboxClose.focus();
+            };
+
+            const closeLightbox = () => {
+                if (!lightbox || !lightboxImage || !lightboxCaption) return;
+                lightbox.classList.remove('active');
+                lightbox.setAttribute('aria-hidden', 'true');
+                lightboxImage.removeAttribute('src');
+                lightboxImage.alt = '';
+                lightboxCaption.textContent = '';
+                document.body.classList.remove('modal-open');
+                if (lastLightboxTrigger) lastLightboxTrigger.focus();
+            };
+
+            btsItems.forEach((item, index) => {
+                item.addEventListener('click', () => openLightbox(index, item));
+            });
+
+            if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+            if (lightboxPrev) lightboxPrev.addEventListener('click', () => setLightboxImage(activeBtsIndex - 1));
+            if (lightboxNext) lightboxNext.addEventListener('click', () => setLightboxImage(activeBtsIndex + 1));
+            if (lightbox) {
+                lightbox.addEventListener('click', (event) => {
+                    if (event.target === lightbox) closeLightbox();
+                });
+            }
+
             document.addEventListener('keydown', (event) => {
-                if (event.key === 'Escape' && modal && modal.classList.contains('active')) {
-                    closeModal();
+                if (event.key === 'Escape') {
+                    if (modal && modal.classList.contains('active')) closeModal();
+                    if (lightbox && lightbox.classList.contains('active')) closeLightbox();
+                    closeMobileNav();
+                }
+
+                if (lightbox && lightbox.classList.contains('active')) {
+                    if (event.key === 'ArrowLeft') setLightboxImage(activeBtsIndex - 1);
+                    if (event.key === 'ArrowRight') setLightboxImage(activeBtsIndex + 1);
                 }
             });
         });
